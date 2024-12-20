@@ -4,8 +4,8 @@ import kotlin.math.abs
 fun main() {
    // day1Step1()
    // day1Step2()
-    day2_1();
-   // day2_2();
+   day021();
+   day022();
 }
 
 
@@ -2075,7 +2075,7 @@ fun processReports(reports: List<Int>): Boolean{
 
 
 // 379
-fun day2_1() {
+fun day021() {
     val data = readFileAsLinesUsingUseLines("./src/day2.txt");
    // data.forEach{ println(it) }
     val safeCount = data.map { processReports(it) }.count { it }
@@ -2084,30 +2084,20 @@ fun day2_1() {
     println("Advent of code $methodName, I found an answer: $safeCount")
 }
 
-fun day2_2() {
+// 430
+fun day022() {
     val data = readFileAsLinesUsingUseLines("./src/day2.txt");
-    // data.forEach{ println(it) }
-
     val safeCount = data.map {
-        val diff = mutableListOf<Int>()
-        var previous = -1;
-        for (index in it.indices) {
-            val level = it[index]
-            if (previous != -1)
-                diff.add(level - previous)
-            previous = level;
+        val iterator = it.listIterator()
+        var valid = isValid(it)
+        while(iterator.hasNext() && !valid) {
+            val truncatedList = it.toMutableList()
+            truncatedList.removeAt(iterator.nextIndex())
+            valid = isValid(truncatedList)
+            iterator.next()
         }
-
-        diff
-    }.count {
-        //print("$it ::")
-        it.sort();
-        val increase =
-            (it.first() > 0 && it.last() < 4) || (it.first() > -4 && it.last() < 0)
-        val isDecreasingOrIncreasing = (it.first() * it.last()) >= 0
-        //println("$it :: $increase $isDecreasingOrIncreasing")
-        increase && isDecreasingOrIncreasing
-    }
+        valid
+    }.count { it }
 
     val methodName = object {}.javaClass.enclosingMethod.name
     println("Advent of code $methodName, I found an answer: $safeCount")
