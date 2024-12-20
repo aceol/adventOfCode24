@@ -10,3 +10,5 @@ fun readFileAsLinesUsingUseLines(fileName: String): List<List<Int>>
     }
 }
 
+fun readTextFile(fileName: String): String
+        = File(fileName).readText()
