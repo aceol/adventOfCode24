@@ -2,7 +2,8 @@ import java.io.File
 import kotlin.math.abs
 
 fun main() {
-    day1Step1()
+    //day1Step1()
+    day1Step2()
 }
 
 fun day1Step1(){
@@ -32,3 +33,23 @@ fun readFileAsLinesUsingUseLines(fileName: String): List<List<Int>>
                     .map{ value -> value.toInt() }
             }
         }
+
+
+
+
+fun day1Step2() {
+    val data = readFileAsLinesUsingUseLines("./src/day1.txt");
+    val left = mutableListOf<Int>();
+    val right= mutableListOf<Int>();
+    data.listIterator().forEach { left.add(it.first()); right.add(it.last()); }
+    left.sort()
+    right.sort()
+    val  rightM = right.groupBy{it -> it}
+
+    val index = left.fold(0){ acc, value ->
+        val rightNumber = rightM.get(value)?.count() ?: 0
+        acc + (value * rightNumber)
+    }
+    val methodName = object {}.javaClass.enclosingMethod.name
+    println("Advent of code $methodName, I found an answer: $index")
+}
