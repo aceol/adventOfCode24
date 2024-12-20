@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="18e22fb4-651c-4e23-9dfc-ade848a8b16b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adventOfCode24.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/adventOfCode24.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/adventOfCode24.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adventOfCode.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/Day1Kt$day1Step1$methodName$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/Day1Kt$day1Step2$methodName$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/Day1Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/Day2Kt$day021$methodName$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/Day2Kt$day022$methodName$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/Day2Kt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/META-INF/adventOfCode24.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/UtilsKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/day1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/day1_ex.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/day2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/day2_ex.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adventOfCode24/day3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/advent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/advent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day3.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2qV45tUjaShko96WDo43H4j7G6l" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.AdventKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;day3&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ace/Projects/adventOfCode24&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.kotlinCompiler&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AdventKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AdventKt" />
+      <module name="adventOfCode24" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.AdventKt" />
+        <item itemvalue="Kotlin.AdventKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18e22fb4-651c-4e23-9dfc-ade848a8b16b" name="Changes" comment="" />
+      <created>1734734229372</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734734229372</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="day2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+</project>
