@@ -4,8 +4,8 @@ import kotlin.math.abs
 fun main() {
    // day1Step1()
    // day1Step2()
-   day021();
-   day022();
+  //  day021();
+   day031();
 }
 
 
@@ -2052,9 +2052,13 @@ fun readFileAsLinesUsingUseLines(fileName: String): List<List<Int>>
             }
         }
 
+fun readTextFile(fileName: String): String
+        = File(fileName).readText()
+
+
 //day 2
 
-fun processReports(reports: List<Int>): Boolean{
+fun isValid(reports: List<Int>): Boolean{
     val diff = mutableListOf<Int>()
     var previous = -1;
     for (index in reports.indices) {
@@ -2077,8 +2081,27 @@ fun processReports(reports: List<Int>): Boolean{
 // 379
 fun day021() {
     val data = readFileAsLinesUsingUseLines("./src/day2.txt");
-   // data.forEach{ println(it) }
-    val safeCount = data.map { processReports(it) }.count { it }
+
+    val safeCount = data.map {
+        val diff = mutableListOf<Int>()
+        var previous = -1;
+        for (index in it.indices) {
+            val level = it[index]
+            if (previous != -1)
+                diff.add(level - previous)
+            previous = level;
+        }
+
+        diff
+    }.count {
+        //print("$it ::")
+        it.sort();
+        val increase =
+            (it.first() > 0 && it.last() < 4) || (it.first() > -4 && it.last() < 0)
+        val isDecreasingOrIncreasing = (it.first() * it.last()) >= 0
+        //println("$it :: $increase $isDecreasingOrIncreasing")
+        increase && isDecreasingOrIncreasing
+    }
 
     val methodName = object {}.javaClass.enclosingMethod.name
     println("Advent of code $methodName, I found an answer: $safeCount")
@@ -2101,4 +2124,16 @@ fun day022() {
 
     val methodName = object {}.javaClass.enclosingMethod.name
     println("Advent of code $methodName, I found an answer: $safeCount")
+}
+
+fun day031() {
+    val input = readTextFile("src/day3.txt");
+    val regex =  """mul\((?<left>\d*),(\d*)\)""".toRegex().findAll(input)
+
+    val res = regex.fold (0, { acc, next ->
+        val (_, left, right) = next.groupValues;
+        acc + (left.toInt()*right.toInt());
+    })
+    val methodName = object {}.javaClass.enclosingMethod.name
+    println("Advent of code $methodName, I found an answer: $res")
 }
