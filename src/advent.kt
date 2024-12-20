@@ -3,8 +3,20 @@ import kotlin.math.abs
 
 fun main() {
     //day1Step1()
-    day1Step2()
+    //day1Step2()
+    day021()
 }
+
+fun readFileAsLinesUsingUseLines(fileName: String): List<List<Int>>
+        = File(fileName).useLines {
+    it.toList().map{
+            line -> line
+        .split(" ")
+        .filter{it.length>0}
+        .map{ value -> value.toInt() }
+    }
+}
+
 
 fun day1Step1(){
     val data = readFileAsLinesUsingUseLines("./src/day1_ex.txt");
@@ -23,18 +35,6 @@ fun day1Step1(){
     val methodName = object {}.javaClass.enclosingMethod.name
     println("Advent of code $methodName, I found an answer: $index")
 }
-
-fun readFileAsLinesUsingUseLines(fileName: String): List<List<Int>>
-        = File(fileName).useLines {
-            it.toList().map{
-                line -> line
-                    .split(" ")
-                    .filter{it.length>0}
-                    .map{ value -> value.toInt() }
-            }
-        }
-
-
 
 
 fun day1Step2() {
