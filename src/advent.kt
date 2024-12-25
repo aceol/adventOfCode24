@@ -5,7 +5,8 @@ fun main() {
     //day022()
     //day031()
     //day032()
-    day041()
+    //day041()
+    day042()
 }
 
 
