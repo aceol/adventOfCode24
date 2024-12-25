@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e22fb4-651c-4e23-9dfc-ade848a8b16b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day032_ex.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day3.kt" afterDir="false" />
+    <list default="true" id="18e22fb4-651c-4e23-9dfc-ade848a8b16b" name="Changes" comment="Day 3 part 2">
+      <change afterPath="$PROJECT_DIR$/src/day04.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day04_ex.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +40,17 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "day3",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ace/Projects/adventOfCode24",
+    "last_opened_file_path": "/Users/ace/Projects/adventOfCode24/src",
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.kotlinCompiler"
+    "settings.editor.selected.configurable": "preferences.language.Kotlin"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -78,6 +80,23 @@
       <option name="presentableId" value="Default" />
       <updated>1734734229372</updated>
     </task>
+    <task id="LOCAL-00001" summary="Config update">
+      <option name="closed" value="true" />
+      <created>1735039300319</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735039300319</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Day 3 part 2">
+      <option name="closed" value="true" />
+      <created>1735039328936</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735039328936</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +123,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Config update" />
+    <MESSAGE value="Day 3 part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 3 part 2" />
   </component>
 </project>
