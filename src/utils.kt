@@ -1,12 +1,13 @@
 import java.io.File
 
-fun readFileAsLinesUsingUseLines(fileName: String, delimiter: String = " "): List<List<Int>>
+fun readFileAsLinesUsingUseLines(fileName: String, delimiter: String = " "): List<MutableList<Int>>
         = File(fileName).useLines {
     it.toList().map{
             line -> line
         .split(delimiter)
         .filter{ it.isNotEmpty() }
         .map{ value -> value.toInt() }
+        .toMutableList()
     }
 }
 
