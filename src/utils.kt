@@ -18,10 +18,10 @@ fun readArrayOfStrings(fileName: String, delimiter: String = ""): List<List<Stri
     }
 }
 
-fun readArrayOfChars(fileName: String, delimiter: String = ""): List<List<Char>>
+fun readArrayOfChars(fileName: String, delimiter: String = ""): List<MutableList<Char>>
 = File(fileName).useLines {
     it.toList().map{
-        it.toCharArray().asList()
+        it.toCharArray().asList().toMutableList()
     }
 }
 
