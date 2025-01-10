@@ -1,31 +1,3 @@
-class Position(var x: Int, var y: Int){
-    override fun toString(): String {
-        return "x: $x, y: $y"
-    }
-
-    override fun hashCode(): Int {
-        return (x+1)*10000 + (y+1)*100
-    }
-
-    fun move(move: Moves): Position{
-        return Position(x+ move.x, y + move.y)
-    }
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as Position
-
-        if (x != other.x) return false
-        if (y != other.y) return false
-
-        return true
-    }
-}
-
-
-
 enum class Moves (val x: Int, val y: Int) {
     UP(0, -1),
     RIGHT(1, 0),
@@ -48,11 +20,11 @@ fun day061() {
     println(map)
     var position = initial(map)
     var direction = Moves.UP
-    while(!isOut(map, position)) {
+    while(!position.isOut(map)) {
         //move(map, position, Moves.UP)
         map[position.y][position.x] = 'X'
         val newPosition = position.move(direction)
-        if (!isOut(map, newPosition) && map[newPosition.y][newPosition.x] == '#') {
+        if (!newPosition.isOut(map) && map[newPosition.y][newPosition.x] == '#') {
             //println("move ${direction.moveRight()}")
             direction = direction.moveRight()
         } else {
@@ -80,7 +52,7 @@ fun day062() {
         }
         updatedMap[y][x] = '#'
 
-        while(!isOut(updatedMap, position)) {
+        while(!position.isOut(updatedMap)) {
             if(isLoop(position, direction, history)){
                 loop ++
                 return@lineForEach
@@ -90,7 +62,7 @@ fun day062() {
             else directions.add(direction)
 
             val newPosition = position.move(direction)
-            if (!isOut(updatedMap, newPosition) && updatedMap[newPosition.y][newPosition.x] == '#') {
+            if (!newPosition.isOut(updatedMap) && updatedMap[newPosition.y][newPosition.x] == '#') {
                 direction = direction.moveRight()
             } else {
                 position = newPosition
@@ -105,20 +77,20 @@ fun day062() {
 
 fun initial(map: List<List<Char>>): Position{
     val character = '^'
-    val y = map.indexOfFirst { it.any {it === character} }
-    val x =  map[y].indexOfFirst { it === character }
+    val y = map.indexOfFirst { it.any {it == character} }
+    val x =  map[y].indexOfFirst { it == character }
     return Position(x, y)
 }
 
 
 // stackOverflow error, too many recursions
 fun move(map: List<MutableList<Char>>, position: Position, direction: Moves): Boolean{
-    if(isOut(map, position)) {
+    if(position.isOut(map)) {
         return false
     }
     map[position.y][position.x] = 'X'
     val newPosition = position.move(direction)
-    return if(!isOut(map, newPosition) && map[newPosition.y][newPosition.x] == '#'){
+    return if(!newPosition.isOut(map) && map[newPosition.y][newPosition.x] == '#'){
         println("move ${direction.moveRight()}")
         move(map, position, direction.moveRight())
     } else {
@@ -126,14 +98,13 @@ fun move(map: List<MutableList<Char>>, position: Position, direction: Moves): Bo
     }
 }
 
-fun isOut(map: List<List<Char>>, position: Position): Boolean{
-    return position.x< 0 || position.y< 0 || position.y >= map.size || position.x >= map.first().size
-}
+
 fun countX(map: List<List<Char>>): Int{
     return map.foldIndexed(0) { index, acc, next ->
         acc + map[index].count{it == 'X'}
     }
 }
+
 fun isLoop(currentPosition: Position, currentMove: Moves, past: Map<Position, List<Moves>>): Boolean {
-    return past.get(currentPosition)?.contains(currentMove) ?: false
+    return past.get(currentPosition)?.contains(currentMove) == true
 }
