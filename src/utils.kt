@@ -15,8 +15,12 @@ fun readArrayOfStrings(fileName: String, delimiter: String = ""): List<List<Stri
         = File(fileName).useLines {
         it.toList().map{
             it.split(delimiter).filter{ it.isNotEmpty() }
-    }
-}
+            }
+        }
+
+fun readLong(fileName: String): String = File(fileName).useLines { it.first() }
+
+
 
 fun readArrayOfChars(fileName: String, delimiter: String = ""): List<MutableList<Char>>
 = File(fileName).useLines {
