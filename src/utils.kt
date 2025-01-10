@@ -65,3 +65,7 @@ class Position(var x: Int, var y: Int){
         return true
     }
 }
+
+fun printMap(map: List<List<Char>>){
+    map.forEach { println(it.joinToString ("")) }
+}
