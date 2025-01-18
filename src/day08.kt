@@ -32,18 +32,6 @@ fun day082() {
     println("Advent of code $methodName, I found an answer: ${antinodes.size}")
 }
 
-fun getMapOfChars(positionsByChar: List<List<Char>>): HashMap<Char, MutableList<Position>>{
-    val mapOfChars = HashMap<Char, MutableList<Position>>()
-    positionsByChar.forEachIndexed{ y: Int, chars: List<Char> ->
-        chars.forEachIndexed{ x: Int, char: Char ->
-            if(char != '.') {
-                addToMap(mapOfChars, char, Position(x, y))
-            }
-        }
-    }
-    return mapOfChars
-}
-
 fun applyDistance(map: HashMap<Char, MutableList<Position>>, extended: Boolean = false): MutableSet<Position>{
     return map.entries.fold(mutableSetOf()){ acc, it ->
         if(it.value.size>1)
@@ -86,14 +74,5 @@ fun isGoingUp(extended: Boolean, extendedUp: Boolean): Boolean{
 
 fun isGoingDown(extended: Boolean, extendedUp: Boolean): Boolean{
     return extended && !extendedUp
-}
-
-
-
-fun addToMap(positionsByChar: HashMap<Char, MutableList<Position>>, char: Char, position: Position) {
-    val positions = positionsByChar[char];
-    if(positions == null) positionsByChar[char] = mutableListOf(position)
-    else positions.add(position)
-
 }
 

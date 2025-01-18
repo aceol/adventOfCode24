@@ -1,99 +1,50 @@
-private val map = readArrayOfChars("./src/day08.txt")
 
-// 303
-fun day081() {
-    val antennas = getMapOfChars(map)
-    val antinodes = applyDistance(antennas)
-//    antinodes
-//        .forEach{
-//            if( map[it.y][it.x] == '.')
-//                map[it.y][it.x] = '#'
-//            else
-//                map[it.y][it.x] = '$'
-//    }
+private val DOT = -1
 
-    val methodName = object {}.javaClass.enclosingMethod.name
-    println("Advent of code $methodName, I found an answer: ${antinodes.size}")
-}
+// xxx
+fun day101(inputName: String = "day10"): Int {
+    val map = readArrayOfChars("./src/${inputName}.txt").map { it -> it.map{ if(it == '.') DOT else it.digitToInt() }}
+    val starters = findStarts(map)
 
-// > 1037
-fun day082() {
-    val antennas = getMapOfChars(map)
-    val antinodes = applyDistance(antennas, true)
-    antinodes
-        .forEach{
-            if( map[it.y][it.x] == '.')
-                map[it.y][it.x] = '#'
-            else
-                map[it.y][it.x] = '$'
+    var score = starters.fold(0){ acc: Int, starter: Position ->
+        var history = mutableListOf<Position>()
+        acc + move(starter, Moves.UP, map, history) + move(starter, Moves.DOWN, map, history) + move(starter, Moves.LEFT, map, history) + move(starter, Moves.RIGHT, map, history)
     }
-    printMap(map)
+
     val methodName = object {}.javaClass.enclosingMethod.name
-    println("Advent of code $methodName, I found an answer: ${antinodes.size}")
+    println("Advent of code $methodName, I found an answer: ${score}")
+    return score
 }
 
-fun getMapOfChars(positionsByChar: List<List<Char>>): HashMap<Char, MutableList<Position>>{
-    val mapOfChars = HashMap<Char, MutableList<Position>>()
-    positionsByChar.forEachIndexed{ y: Int, chars: List<Char> ->
-        chars.forEachIndexed{ x: Int, char: Char ->
-            if(char != '.') {
-                addToMap(mapOfChars, char, Position(x, y))
-            }
+fun move(from: Position, direction: Moves, map: List<List<Int>>, history: MutableList<Position>, score: Int = 0, idx: Int = 1): Int {
+    val newPosition = from.move(direction);
+    if(newPosition.isOut(map))
+        return score
+    val newPositionIndex = map[newPosition.y][newPosition.x]
+    if(newPositionIndex == 9 && idx == 9) {
+        // Comment out this for day 10 part 2s
+        if(history.contains(newPosition)) return score
+        history.add(newPosition)
+        //println("${from} (${map[from.y][from.x]}) ${newPosition} => ${score +1}")
+        return score + 1
+    }
+    if (newPositionIndex == idx) {
+        //println("${idx} goes to ${newPositionIndex} (${direction})")
+        return score + (move(newPosition, Moves.UP, map, history, score, newPositionIndex+1)
+            + move(newPosition, Moves.DOWN, map, history, score, newPositionIndex+1)
+            + move(newPosition, Moves.LEFT, map, history, score, newPositionIndex+1)
+            + move(newPosition, Moves.RIGHT, map, history, score, newPositionIndex+1))
+    } else return score;
+}
+
+
+fun findStarts(map: List<List<Int>>): List<Position>{
+    val character = 0
+    return map.foldIndexed(mutableListOf()) { y: Int, acc: MutableList<Position>, line: List<Int> ->
+        line.forEachIndexed { x: Int, value: Int ->
+            if(value == character)
+                acc.add(Position(x, y))
         }
-    }
-    return mapOfChars
-}
-
-fun applyDistance(map: HashMap<Char, MutableList<Position>>, extended: Boolean = false): MutableSet<Position>{
-    return map.entries.fold(mutableSetOf()){ acc, it ->
-        if(it.value.size>1)
-            acc.addAll(it.value)
-        acc.addAll(applyDistanceRec(it.value.first(), it.value.drop(1), extended))
         acc
     }
 }
-
-fun applyDistanceRec(position: Position, list: List<Position>, extended: Boolean = false, extendedUp: Boolean? = null): MutableSet<Position> {
-    val antinodes = mutableSetOf<Position>()
-    //println("check for $position ($list)")
-    if(list.isNotEmpty()){
-        list.forEach {
-            //println("$position ::: $it")
-            val distance = Position(it.x - position.x, it.y - position.y)
-            val up = Position(position.x - distance.x, position.y - distance.y)
-            val down = Position(it.x + distance.x, it.y + distance.y)
-            //println("$it : $position => ${up}, ${down}")
-            if(!up.isOut(map)) {
-                antinodes.add(up)
-                if(extendedUp == null || isGoingUp(extended, extendedUp))
-                    antinodes.addAll(applyDistanceRec(up, listOf(position), extended, true))
-            }
-            if(!down.isOut(map)){
-                antinodes.add(down)
-                if(extendedUp == null || isGoingDown(extended, extendedUp))
-                    antinodes.addAll(applyDistanceRec(it, listOf(down), extended, false))
-            }
-        }
-        antinodes.addAll(applyDistanceRec(list.first(), list.drop(1), extended))
-    }
-
-    return antinodes
-}
-
-fun isGoingUp(extended: Boolean, extendedUp: Boolean): Boolean{
-    return extended && extendedUp
-}
-
-fun isGoingDown(extended: Boolean, extendedUp: Boolean): Boolean{
-    return extended && !extendedUp
-}
-
-
-
-fun addToMap(positionsByChar: HashMap<Char, MutableList<Position>>, char: Char, position: Position) {
-    val positions = positionsByChar[char];
-    if(positions == null) positionsByChar[char] = mutableListOf(position)
-    else positions.add(position)
-
-}
-
