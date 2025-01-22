@@ -13,16 +13,23 @@ class Day11KtTest {
     }
 
     @Test
-    fun testEx2() {
+    fun testEx1_2_6cycles() {
         val expected = 22
         var result = day111("125 17", 6)
         assertEquals(result, expected)
     }
 
     @Test
-    fun testEx3() {
+    fun testEx1_3_25cycles() {
         val expected = 55312
         var result = day111("125 17", 25)
+        assertEquals(result, expected)
+    }
+
+    @Test
+    fun testEx2_1_25cycles() {
+        val expected = 55312.toLong()
+        var result = day112("125 17", 25)
         assertEquals(result, expected)
     }
 }

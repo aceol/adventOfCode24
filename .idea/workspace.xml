@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e22fb4-651c-4e23-9dfc-ade848a8b16b" name="Changes" comment="Day 3 part 2">
-      <change afterPath="$PROJECT_DIR$/src/day04.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day04_ex.txt" afterDir="false" />
+    <list default="true" id="18e22fb4-651c-4e23-9dfc-ade848a8b16b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adventOfCode24.iml" beforeDir="false" afterPath="$PROJECT_DIR$/adventOfCode24.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Day11KtTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Day11KtTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/advent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/advent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day11.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/day11.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,12 +21,16 @@
       <list>
         <option value="Class" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin TestNG Test Class" />
         <option value="Kotlin File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -33,20 +40,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.AdventKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "day3",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ace/Projects/adventOfCode24/src",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.language.Kotlin"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Kotlin.AdventKt.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;TestNG./Users/ace/Library/Caches/JetBrains/IdeaIC2024.3/temp-testng-customsuite.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Day10KtTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Day10KtTest.testEx1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Day10KtTest.testEx2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Day10KtTest.testEx4.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Day10KtTest.testSum.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.Day11KtTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Day11KtTest.testEx1.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.Day11KtTest.testEx2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Day11KtTest.testEx3.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;TestNG&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dqy11&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ace/Projects/adventOfCode24/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -54,20 +77,85 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.Day11KtTest.testEx2_1_25cycles">
     <configuration name="AdventKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AdventKt" />
       <module name="adventOfCode24" />
-      <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day11KtTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="adventOfCode24" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Day11KtTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day11KtTest.testEx2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="adventOfCode24" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Day11KtTest" />
+      <option name="METHOD_NAME" value="testEx2" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day11KtTest.testEx2_1_25cycles" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="adventOfCode24" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Day11KtTest" />
+      <option name="METHOD_NAME" value="testEx2_1_25cycles" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day11KtTest.testEx3" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="adventOfCode24" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Day11KtTest" />
+      <option name="METHOD_NAME" value="testEx3" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Kotlin.AdventKt" />
+      <item itemvalue="TestNG.Day11KtTest.testEx2_1_25cycles" />
+      <item itemvalue="TestNG.Day11KtTest" />
+      <item itemvalue="TestNG.Day11KtTest.testEx2" />
+      <item itemvalue="TestNG.Day11KtTest.testEx3" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Day11KtTest.testEx2_1_25cycles" />
+        <item itemvalue="TestNG.Day11KtTest" />
         <item itemvalue="Kotlin.AdventKt" />
-        <item itemvalue="Kotlin.AdventKt" />
+        <item itemvalue="TestNG.Day11KtTest.testEx3" />
+        <item itemvalue="TestNG.Day11KtTest.testEx2" />
       </list>
     </recent_temporary>
   </component>
@@ -96,7 +184,39 @@
       <option name="project" value="LOCAL" />
       <updated>1735039328936</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="day07 private">
+      <option name="closed" value="true" />
+      <created>1736504822287</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1736504822287</updated>
+    </task>
+    <task id="LOCAL-00004" summary="day 10">
+      <option name="closed" value="true" />
+      <created>1737238479041</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737238479041</updated>
+    </task>
+    <task id="LOCAL-00005" summary="day 10">
+      <option name="closed" value="true" />
+      <created>1737238577975</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737238577975</updated>
+    </task>
+    <task id="LOCAL-00006" summary="day 11 1">
+      <option name="closed" value="true" />
+      <created>1737323403063</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737323403063</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +245,50 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Config update" />
     <MESSAGE value="Day 3 part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 3 part 2" />
+    <MESSAGE value="day07 private" />
+    <MESSAGE value="day09 step 2" />
+    <MESSAGE value="day 10" />
+    <MESSAGE value="day 11 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 11 1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/day09.kt</url>
+          <line>37</line>
+          <properties method="getReordered">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/day05.kt</url>
+          <line>31</line>
+          <properties method="day052">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/day09.kt</url>
+          <line>81</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/day11.kt</url>
+          <line>2</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JetRunConfigurationType">
+        <watch expression="chars.subList(first-1, chars.size-1)" language="kotlin" />
+        <watch expression="chars.subList(first, chars.size)" language="kotlin" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
