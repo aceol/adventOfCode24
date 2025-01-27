@@ -62,7 +62,7 @@ fun readTextFile(fileName: String): String
 
 class Position(var x: Int, var y: Int){
     override fun toString(): String {
-        return "x: $x, y: $y"
+        return "(x:$x,y:$y)"
     }
 
     override fun hashCode(): Int {
