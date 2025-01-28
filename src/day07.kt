@@ -1,4 +1,4 @@
-val map = readArrayOfStrings("./src/day07.txt", ":").associateBy(
+private val map = readArrayOfStrings("./src/day07.txt", ":").associateBy(
     {it.get(0).toLong()}, {it.get(1).split(" ").filter{it -> it.isNotEmpty()}.map(String::toLong)}
 ).toMap()
 
